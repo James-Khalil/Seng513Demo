@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Home screen -->
+    <div id="homescreen"> 
+        <div id="homebox">
+            <h1 class="title">Welcome to Quick Quiz!</h1>
+            <form id="setting-form">
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter a username" required>
+                </div>
+                <div class="form-input">
+                    <label for="category">Category</label>
+                    <select name="category" id="category" required>
+                        <option value="">Select a Category</option>
+                    </select>    
+                </div>
+                <div class="form-input">
+                    <label for="number">Number of questions</label>
+                    <input type="number" id="amount" placeholder="number of questions (5-50)" min="5" max="50" required>
+                </div>
+                
+                <button id="start-button" type="submit">Start Quiz</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- quiz screen -->
+    <div id="quiz-container" style="display: none;">
+        <div id="quiz-box">
+            <h1 class="title">Quick Quiz</h1>
+            <div id="difficulty-notifier"></div> <!-- Notifier for current difficulty -->
+            <div id="score-display"></div> <!-- Display for score -->
+            <div id="question"></div>
+            <div class="options-container" id="choices"></div> <!-- Updated container for options -->
+            <button id="submit-button" disabled>Submit</button>
+        </div>
+    </div>
+
+
+    <!-- Intermediary screen after answering -->
+    <div id="intermediary-screen" style="display: none;">
+        <div id="intermediary-box">
+            <div id="result">
+                <h2 id="result-message"></h2> <!-- Will display "Correct!" or "Incorrect!" -->
+                <p id="correct-answer"></p> <!-- Will display the correct answer if the user was wrong -->
+            </div>
+            <button id="next-question-button">Next Question</button>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+</html>

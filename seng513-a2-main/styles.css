@@ -1,0 +1,191 @@
+.title {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-image: url(flourish.png);
+    background-size: 25%;
+    background-blend-mode: color-burn;
+    color: rgb(221, 221, 221);
+    margin: 0;
+    background-color: #1f5c85;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+}
+
+#setting-form {
+    display: grid;
+    gap: 20px;
+    padding-inline: 20px;
+    align-self: center;
+}
+
+select {
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+input {
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.form-input {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+button {
+    height: 45px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+}
+
+#homescreen {
+    
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#homebox {
+    background-color: #103f5e;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: black;
+    border-width: 1px;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+#start-button {
+    margin-top: 30px;
+    place-self: center;
+}
+
+label {
+    font-size: large;
+}
+
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height for centering */
+    text-align: center; /* Center the text */
+}
+
+#quiz-box {
+    background-color: #103f5e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: 50%;
+    padding: 20px;
+    height: fit-content; /* Full height for centering */
+    text-align: center; /* Center the text */
+}
+
+#question {
+    font-size: 24px; /* Larger font for the question */
+    width: 80%;
+    margin-bottom: 20px; /* Space below the question */
+}
+
+/* Container for options to create a grid layout */
+.options-container {
+    display: grid;
+    width:  70%;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    column-gap: 10px; /* Remove gaps between grid items */
+    margin-bottom: 50px;
+}
+
+button.questions {
+    width: 100%;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+button:hover {
+    background-color: rgb(99, 136, 99);
+}
+
+button.questions:hover {
+    width: 100%;
+    background-color: rgb(233, 198, 156);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(46, 46, 46, 0.7);
+}
+
+.questions {
+    background-color: #ffffff; /* Normal background color */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    color: rgb(0, 0, 0); /* Text color */
+    border: none;
+}
+
+.highlight {
+    background-color: rgb(99, 136, 99); /* Background color when selected */
+    color: white;
+}
+
+#intermediary-screen {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intermediary-box {
+    background-color: #103f5e;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+#submit-button {
+    background-color: grey; /* Initial greyed-out color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed; /* Greyed-out button can't be clicked */
+}
+
+#submit-button.enabled:hover {
+    background-color: rgb(99, 136, 99);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+#submit-button.enabled {
+    background-color: white; /* Green color when enabled */
+    color: black;
+    cursor: pointer; /* Change cursor to pointer when enabled */
+}
